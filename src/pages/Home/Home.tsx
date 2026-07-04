@@ -80,24 +80,34 @@ const Home = () => {
     <div className="w-full font-jakarta">
       <section className="relative w-full aspect-video lg:aspect-auto lg:h-[100vh] lg:min-h-[500px] overflow-hidden bg-black flex items-center">
         <div className="absolute inset-0 w-full h-full">
-          <video autoPlay muted onEnded={() => setIsVideoFinished(true)} playsInline preload="metadata" poster="/images/bg-hero-home.png" className="w-full h-full object-cover object-center">
-            <source src="/video/video_home.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-linear-to-r from-black/40 via-black/10 to-transparent transition-opacity duration-1000"></div>
-          <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-black/10 transition-opacity duration-1000"></div>
-          <div className={`absolute inset-0 bg-black/60 transition-opacity duration-1000 ${isVideoFinished ? 'opacity-70' : 'opacity-0'}`}></div>
+          <img
+            src="/images/bg-hero-home.png"
+            alt="Hero background"
+            className="w-full h-full object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-linear-to-r from-black/70 via-black/40 to-black/20"></div>
+          <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-black/30"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-
-        <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center">
-          <div className="max-w-3xl text-white space-y-1.5 sm:space-y-4 md:space-y-6 pt-10 sm:pt-14 md:pt-20">
-            <h1 className={`text-lg sm:text-3xl md:text-6xl font-bold leading-tight ${isVideoFinished ? 'animate-fade-in-up' : 'opacity-0'}`}>Building Reliable Infrastructure For Indonesia</h1>
-            <p className={`text-[10px] sm:text-sm md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed ${isVideoFinished ? 'animate-fade-in-up delay-100' : 'opacity-0'}`}>
+        <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center items-center text-center">
+          <div className="max-w-4xl text-white space-y-1.5 sm:space-y-4 md:space-y-6 pt-10 sm:pt-14 md:pt-20 flex flex-col items-center">
+            <h1
+              className="text-lg sm:text-3xl md:text-6xl font-bold leading-tight animate-fade-in-up"
+              style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.6)' }}
+            >
+              Building Reliable Infrastructure For Indonesia
+            </h1>
+            <p
+              className="text-[10px] sm:text-sm md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed animate-fade-in-up delay-100"
+              style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.6)' }}
+            >
               PT. Cipta Selamat Mandiri delivers integrated construction and engineering solutions with a strong commitment to safety, quality, and sustainability.
             </p>
-            <div className={`pt-1 sm:pt-2 md:pt-4 ${isVideoFinished ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}>
+            <div className="pt-1 sm:pt-2 md:pt-4 animate-fade-in-up delay-200">
               <Link
                 to="/about"
-                className="inline-flex items-center gap-1.5 px-4 py-1.5 sm:px-6 sm:py-2 md:px-8 md:py-3 rounded-full border border-white text-white hover:bg-white hover:text-[#0e3b28] transition-all duration-300 font-medium text-[10px] sm:text-sm md:text-base"
+                className="inline-flex items-center gap-1.5 px-4 py-1.5 sm:px-6 sm:py-2  md:px-8 md:py-3 rounded-full border border-white text-black bg-white hover:bg-white/70 hover:text-white transition-all duration-300 font-medium text-[10px] sm:text-sm md:text-base"
+                // style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.5)' }}
               >
                 See More <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
               </Link>
