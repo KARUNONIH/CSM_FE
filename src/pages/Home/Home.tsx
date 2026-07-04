@@ -70,6 +70,12 @@ const Home = () => {
 
   const duplicatedClients = data.clients ? [...data.clients, ...data.clients] : [];
 
+  const thumbnails = [
+    "/images/services/service1.png",
+    "/images/services/service2.png",
+    "/images/services/service3.png",
+  ];
+
   return (
     <div className="w-full font-jakarta">
       <section className="relative w-full aspect-video lg:aspect-auto lg:h-[100vh] lg:min-h-[500px] overflow-hidden bg-black flex items-center">
@@ -86,7 +92,7 @@ const Home = () => {
           <div className="max-w-3xl text-white space-y-1.5 sm:space-y-4 md:space-y-6 pt-10 sm:pt-14 md:pt-20">
             <h1 className={`text-lg sm:text-3xl md:text-6xl font-bold leading-tight ${isVideoFinished ? 'animate-fade-in-up' : 'opacity-0'}`}>Building Reliable Infrastructure For Indonesia</h1>
             <p className={`text-[10px] sm:text-sm md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed ${isVideoFinished ? 'animate-fade-in-up delay-100' : 'opacity-0'}`}>
-              PT. Bumi Rekayasa Mandiri delivers integrated construction and engineering solutions with a strong commitment to safety, quality, and sustainability.
+              PT. Cipta Selamat Mandiri delivers integrated construction and engineering solutions with a strong commitment to safety, quality, and sustainability.
             </p>
             <div className={`pt-1 sm:pt-2 md:pt-4 ${isVideoFinished ? 'animate-fade-in-up delay-200' : 'opacity-0'}`}>
               <Link
@@ -164,7 +170,7 @@ const Home = () => {
           <div className="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-gray-200 pb-4">
             <div className="mb-4 md:mb-0">
               <h2 className="text-3xl md:text-4xl font-bold text-[#5a1e1b] mb-1">Articles</h2>
-              <p className="text-gray-500 text-sm md:text-base">Find out what Bumi Rekayasa Mandiri is up to.</p>
+              <p className="text-gray-500 text-sm md:text-base">Find out what Cipta Selamat Mandiri is up to.</p>
             </div>
 
             <div className="flex bg-[#fcf9f6] p-1 rounded-full border border-gray-200">
@@ -215,32 +221,45 @@ const Home = () => {
         <div className="container mx-auto px-6 md:px-12 relative z-10">
           <div className="mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Our Services</h2>
-            <p className="text-gray-300 text-lg border-t border-white/20 pt-4 inline-block">These categories introduce what Bumi Rekayasa Mandiri is focusing.</p>
+            <p className="text-gray-300 text-lg border-t border-white/20 pt-4 inline-block">These categories introduce what Cipta Selamat Mandiri is focusing.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {data.services.map((service) => {
-              return (
-                <div key={service.id} className="relative group overflow-hidden rounded-xl bg-gray-800 border border-white/10 aspect-video md:aspect-square lg:aspect-4/3">
-                  <img
-                    src={service.thumbnail || '/images/placeholder-service.jpg'}
-                    alt={service.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent"></div>
+  {data.services.map((service, index) => {
+    return (
+      <div
+        key={service.id}
+        className="relative group overflow-hidden rounded-xl bg-gray-800 border border-white/10 aspect-video md:aspect-square lg:aspect-4/3"
+      >
+        <img
+          src={thumbnails[index] || "/images/placeholder-service.jpg"}
+          alt={service.name}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+          loading="lazy"
+        />
 
-                  <div className="absolute bottom-0 left-0 w-full p-5 md:p-8">
-                    <span className="inline-block px-3 py-1 bg-[#8a2f2b] text-white text-xs font-bold uppercase tracking-wider mb-2 rounded-sm">{service.name}</span>
-                    <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 line-clamp-1">{service.description?.slice(0, 50) || service.name}</h3>
-                    <Link to={`/services/${service.slug}`} className="text-sm font-medium text-gray-300 group-hover:text-white flex items-center gap-1 mt-2">
-                      Learn more <ArrowRight size={14} />
-                    </Link>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+        <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent"></div>
+
+        <div className="absolute bottom-0 left-0 w-full p-5 md:p-8">
+          <span className="inline-block px-3 py-1 bg-[#8a2f2b] text-white text-xs font-bold uppercase tracking-wider mb-2 rounded-sm">
+            {service.name}
+          </span>
+
+          <h3 className="text-lg md:text-xl lg:text-2xl font-bold mb-2 line-clamp-1">
+            {service.description?.slice(0, 50) || service.name}
+          </h3>
+
+          {/* <Link
+            to={`/services/${service.slug}`}
+            className="text-sm font-medium text-gray-300 group-hover:text-white flex items-center gap-1 mt-2"
+          >
+            Learn more <ArrowRight size={14} />
+          </Link> */}
+        </div>
+      </div>
+    );
+  })}
+</div>
 
           <div className="text-center mt-12">
             <Link to="/services" className="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-white text-white hover:bg-white hover:text-[#0e3b28] transition-all duration-300">
@@ -256,8 +275,8 @@ const Home = () => {
             <div className="md:w-1/2">
               <h2 className="text-4xl font-bold text-[#5a1e1b] mb-4">Our Clients</h2>
               <div className="w-24 h-1 bg-[#5a1e1b] mb-6 mx-auto md:mx-0"></div>
-              <h3 className="text-xl font-bold text-gray-800 mb-2">Why Choose PT. Bumi Rekayasa Mandiri</h3>
-              <p className="text-gray-600">We have worked with leading companies and organizations, across multiple sectors in Indonesia.</p>
+              <h3 className="text-xl font-bold text-gray-800 mb-2">Why Choose PT. Cipta Selamat Mandiri</h3>
+              <p className="text-gray-600">Lokasi strategis dan mudah untuk akses ke customer, tenaga ahli, inspektor, dan trainer berkualitas, bersertifikasi serta pengalaman yang luas, pendidikan dan pelatihan yang terintegritas, menggunakan sistem berbasis penempatan, jaringan / network yang luas.</p>
             </div>
             <div className="hidden md:block">
               <Link

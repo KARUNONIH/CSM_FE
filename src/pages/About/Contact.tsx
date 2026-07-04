@@ -11,12 +11,6 @@ const SECONDARY_OFFICES = [
     qrUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=KIIC East Ecospace II No.2 Karawang 41361 Jawa Barat Indonesia',
     mapsUrl: 'https://maps.google.com/?q=KIIC+East+Ecospace+II+No.2+Karawang+41361+Jawa+Barat+Indonesia',
   },
-  {
-    title: 'Site Office',
-    address: 'Cikarang - Ejip, Kawasan EJIP Jalan Cimandiri 1',
-    qrUrl: 'https://api.qrserver.com/v1/create-qr-code/?size=130x130&data=Kawasan EJIP Jalan Cimandiri 1 Cikarang',
-    mapsUrl: 'https://maps.google.com/?q=Kawasan+EJIP+Jalan+Cimandiri+1+Cikarang',
-  },
 ];
 
 const Contact = () => {
@@ -57,22 +51,6 @@ const Contact = () => {
               </div>
             </a>
 
-            <a
-              href={SECONDARY_OFFICES[1].mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="lg:col-span-2 lg:w-1/2 lg:mx-auto flex flex-row items-center gap-4 text-left group cursor-pointer"
-              title={`Buka ${SECONDARY_OFFICES[1].title} di Google Maps`}
-            >
-              <img src="/images/location-icon.png" alt="Location Icon" className="h-16 lg:h-24 w-auto object-contain transition-transform duration-300 group-hover:scale-110 shrink-0" />
-              <div className="flex flex-row items-center gap-4">
-                <div className="flex flex-col gap-2">
-                  <h2 className="text-2xl font-bold group-hover:underline underline-offset-4 transition-all">{SECONDARY_OFFICES[1].title}</h2>
-                  <p className="text-base leading-relaxed text-white/90 group-hover:text-white transition-colors">{SECONDARY_OFFICES[1].address}</p>
-                </div>
-                <img src={SECONDARY_OFFICES[1].qrUrl} alt={`QR ${SECONDARY_OFFICES[1].title}`} className="bg-white p-2 rounded-lg shadow-md w-24 h-24 object-contain shrink-0" />
-              </div>
-            </a>
           </div>
         </div>
       </section>

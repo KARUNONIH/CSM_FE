@@ -61,8 +61,8 @@ const About = () => {
     <main className="w-full font-jakarta">
       <section className="h-62.5 md:h-87.5 lg:h-87.5 bg-linear-to-l from-white to-brm-beige-2 flex items-center pt-16 md:pt-24 lg:pt-24 py-4">
         <img
-          src="/images/logo-brm-2.png"
-          alt="Logo BRM"
+          src="/images/logo-csm-2.png"
+          alt="Logo CSM"
           className="h-32 md:h-40 lg:h-40 mx-auto object-contain"
         />
       </section>
@@ -76,7 +76,7 @@ const About = () => {
         </div>
 
         <p className="text-justify text-black leading-relaxed">
-          PT. Bumi Rekayasa Mandiri adalah perusahaan kontraktor yang bergerak
+          PT. Cipta Selamat Mandiri adalah perusahaan kontraktor yang bergerak
           di bidang jasa konstruksi, berkomitmen untuk menghadirkan solusi
           pembangunan yang berkualitas, efisien, dan berkelanjutan. Dengan
           dukungan sumber daya manusia yang profesional serta pengalaman dalam
@@ -112,10 +112,7 @@ const About = () => {
               <div className="flex-1 h-[1.5px] bg-[#C92D29]"></div>
             </div>
             <p className="text-justify text-black leading-relaxed">
-              Menjadi perusahaan konstruksi terkemuka yang presisi, profesional,
-              dan berkelanjutan dengan fondasi teknik yang kuat, serta
-              berkontribusi dalam pembangunan infrastruktur Indonesia yang
-              berkualitas, cerdas, dan ramah lingkungan.
+              Menjadi perusahaan yang terpercaya dan profesional dalam dunia K3 serta meningkatkan sumber daya manusia untuk kemajuan bersama.
             </p>
           </div>
 
@@ -127,16 +124,16 @@ const About = () => {
               <div className="flex-1 h-[1.5px] bg-[#C92D29]"></div>
             </div>
 
-            <p className="text-justify text-black leading-relaxed">
-              1.Menyelenggarakan jasa konstruksi berkualitas tinggi <br />
-              2.Menerapkan prinsip Green Building secara berkelanjutan <br />
-              3.Mengintegrasikan seluruh divisi konstruksi, sipil, dan MEP{" "}
-              <br />
-              4.Memanfaatkan inovasi dan teknologi konstruksi modern <br />
-              5.Menjaga integritas, profesionalitas, dan kepercayaan klien{" "}
-              <br />
-              6.Berperan aktif dalam pembangunan nasional yang bertanggung jawab
-            </p>
+           <p className="text-justify text-black leading-relaxed">
+  1. Memberikan service excellent dalam pelaksanaan pemeriksaan, pengujian,
+  sertifikasi, training, dan konsultasi yang profesional serta mengacu pada
+  peraturan yang berlaku. <br />
+  2. Ikut serta dalam peningkatan mutu sumber daya manusia yang unggul. <br />
+  3. Menciptakan lingkungan yang berdampak positif untuk kemajuan manusia.{" "}
+  <br />
+  4. Berupaya selalu melakukan inovasi yang berkelanjutan melalui proses
+  sistem manajemen pemberdayaan.
+</p>
           </div>
         </div>
 

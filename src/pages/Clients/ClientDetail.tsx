@@ -112,7 +112,7 @@ const ClientDetail = () => {
               {client.name}
             </h2>
             <p className="text-gray-500 mb-6">
-              Trusted partner of PT. Bumi Rekayasa Mandiri
+              Trusted partner of PT. Cipta Selamat Mandiri
             </p>
 
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">

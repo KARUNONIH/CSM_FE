@@ -56,7 +56,7 @@ const Navbar = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 font-jakarta py-1 md:py-1 ${getNavBackground()}`}>
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center relative z-50">
         <Link to="/" className="flex items-center gap-3">
-          <img src="/images/logo-brm.png" alt="Bumi Rekayasa Mandiri" className={`h-16 md:h-26 w-auto object-contain transition-all duration-300 ${isHome && !isScrolled ? 'opacity-0 invisible' : 'opacity-100 visible'}`} />
+          <img src="/images/logo-csm.png" alt="cipta Selamat Mandiri" className={`h-16 md:h-26 w-auto object-contain transition-all duration-300 ${isHome && !isScrolled ? 'opacity-0 invisible' : 'opacity-100 visible'}`} />
         </Link>
 
         <div className="hidden lg:flex items-center space-x-10">
@@ -89,7 +89,7 @@ const Navbar = () => {
         </div>
 
         <div className="absolute bottom-10 text-center space-y-1">
-          <p className="text-sm font-semibold text-brm-green">PT. BUMI REKAYASA MANDIRI</p>
+          <p className="text-sm font-semibold text-brm-green">PT. CIPTA SELAMAT MANDIRI</p>
           <p className="text-xs text-gray-400">Precision Building. Sustainable Value.</p>
         </div>
       </div>

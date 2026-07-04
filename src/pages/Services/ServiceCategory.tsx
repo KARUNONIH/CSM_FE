@@ -10,6 +10,12 @@ const ServiceCategoryPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  const thumbnails = [
+    "/images/services/service1.png",
+    "/images/services/service2.png",
+    "/images/services/service3.png",
+  ];
+
   useEffect(() => {
     const fetchCategories = async () => {
       try {
@@ -77,7 +83,7 @@ const ServiceCategoryPage = () => {
             Our Services
           </h1>
           <p className="text-gray-200 text-base md:text-lg max-w-2xl font-light leading-relaxed drop-shadow-md animate-fade-in-up delay-200">
-            These categories introduce what Bumi Rekayasa Mandiri is focusing
+            These categories introduce what Cipta Selamat Mandiri is focusing
             on.
           </p>
         </div>
@@ -86,9 +92,13 @@ const ServiceCategoryPage = () => {
       <div className="relative z-10 container mx-auto px-6 md:px-12 py-12 md:py-16">
         {categories.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-            {categories.map((category) => (
-              <ServiceCategoryCard key={category.id} category={category} />
-            ))}
+            {categories.map((category, index) => (
+  <ServiceCategoryCard
+    key={category.id}
+    category={category}
+    thumbnail={thumbnails[index]}
+  />
+))}
           </div>
         ) : (
           <div className="text-center py-20 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
