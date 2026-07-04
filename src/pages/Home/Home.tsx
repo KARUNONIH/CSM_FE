@@ -90,18 +90,21 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="relative z-10 container mx-auto px-4 md:px-6 h-full flex flex-col justify-center items-center text-center">
-          <div className="max-w-4xl text-white space-y-1.5 sm:space-y-4 md:space-y-6 pt-10 sm:pt-14 md:pt-20 flex flex-col items-center">
+          <div className="max-w-[1100px] text-white space-y-1.5 sm:space-y-4 md:space-y-6 pt-10 sm:pt-14 md:pt-20 flex flex-col items-center">
             <h1
               className="text-lg sm:text-3xl md:text-6xl font-bold leading-tight animate-fade-in-up"
               style={{ textShadow: '1px 1px 4px rgba(0,0,0,0.6)' }}
             >
-              Building Reliable Infrastructure For Indonesia
+              Professional K3 Inspection, Certification & Calibration Services
             </h1>
             <p
-              className="text-[10px] sm:text-sm md:text-xl text-gray-200 font-light max-w-2xl leading-relaxed animate-fade-in-up delay-100"
+              className="text-[10px] sm:text-sm md:text-xl text-gray-200 font-light max-w-4xl leading-relaxed animate-fade-in-up delay-100"
               style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.6)' }}
             >
-              PT. Cipta Selamat Mandiri delivers integrated construction and engineering solutions with a strong commitment to safety, quality, and sustainability.
+              PT. Cipta Selamat Mandiri provides professional inspection, testing,
+                  certification, calibration, and occupational safety (K3) training
+                  services to help industries meet regulations while ensuring safe,
+                  reliable, and compliant operations.
             </p>
             <div className="pt-1 sm:pt-2 md:pt-4 animate-fade-in-up delay-200">
               <Link
